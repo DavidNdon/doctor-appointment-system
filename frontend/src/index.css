@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: Outfit, sans-serif;
+}
+@theme {
+  --color-primary: #414A37 ; /* Indigo-600 #4f46e5 #3252a8*/
+  --color-secondary: #ec4899; /* Pink-500 */
+  --color-background: #f3f4f6; /* Gray-100 */
+  --color-text: #111827; /* Gray-900 */
+  --border-color: #d1d5db; /* Gray-300 */
+   --grid-template-columns-auto: repeat(auto-fill, minmax(200px, 1fr));
+}
+.active hr{
+  @apply block
+}
+
+::-webkit-scrollbar{
+  @apply hidden
+}
