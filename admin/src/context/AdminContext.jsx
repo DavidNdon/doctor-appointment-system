@@ -13,7 +13,7 @@ const AdminContextProvider = (props) => {
     const [appointments, setAppointments] = useState([]);
     const [dashboardData, setDashboardData] = useState(false);
     
-    const backend_url = import.meta.env.VITE_BACKEND_URL;
+    const backend_url = 'https://doctor-appointment-system-backend-br9i.onrender.com';
 
     const allDoctors = async () => {
 
