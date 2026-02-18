@@ -11,7 +11,7 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
 
-    const backend_url = import.meta.env.VITE_BACKEND_URL
+    const backend_url = 'https://doctor-appointment-system-backend-br9i.onrender.com'
     const [doctors, setDoctors] = useState([])
 
     const [token, setToken] = useState(localStorage.getItem('usertoken') ? localStorage.getItem('usertoken') : false)
