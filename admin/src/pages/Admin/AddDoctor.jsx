@@ -4,7 +4,7 @@ import { AdminContext } from '../../context/AdminContext'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
-const Adddoctor = () => {
+const AddDoctor = () => {
 
 const [docImg, setDocImg] = useState(null)
 const [name, setName] = useState('')
@@ -173,4 +173,4 @@ const handleSubmit = async (event) => {
   );
 }
 
-export default Adddoctor
+export default AddDoctor
