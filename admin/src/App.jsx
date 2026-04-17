@@ -31,7 +31,7 @@ function App() {
         <Sidebar/>
         <Routes>
           {/* Admin routes */}
-          <Route path='/' element={<></>} />
+          <Route path='/' element={<Dashboard />} />
           <Route path='/admin-dashboard' element={<Dashboard />} />
           <Route path='/all-appointments' element={<AllAppointments />} />
           <Route path='/add-doctor' element={<Adddoctor />} />

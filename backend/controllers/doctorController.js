@@ -12,20 +12,16 @@ const changeAvailability = async (req, res) => {
      const docData = await doctorModel.findById(docId);
      await doctorModel.findByIdAndUpdate(docId, {available: !docData.available});
      res.status(200).send({success: true, message: "Availability status changed successfully"})
-
    } catch (error) {
         console.log(error);
         res.status(500).send({success: false, message: "Error in changing availability status", error})
    }
-
 };
 
 const doctorList = async (req, res) => {
   try {
-
     const doctors = await doctorModel.find({}).select(["-password", '-email']);
-    res.status(200).send({success: true, message: "Doctor list fetched successfully", doctors})
-    
+    res.status(200).send({success: true, message: "Doctor list fetched successfully", doctors}) 
   } catch (error) {
     console.log(error);
     res.status(500).send({success: false, message: "Error in changing availability status", error})

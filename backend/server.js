@@ -22,11 +22,6 @@ app.use('/api/admin', adminRouter);
 app.use('/api/doctor', doctorRouter);
 app.use('/api/user', userRouter);
 
-// simple route
-app.get('/', (req, res) => {
-    res.send("Hello from server");
-})
-
 app.listen(PORT, async () => {
     try {
         await connectDB();

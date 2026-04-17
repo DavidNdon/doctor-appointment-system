@@ -4,7 +4,6 @@ import userModel from '../models/userModel.js';
 import jwt from 'jsonwebtoken';
 import { v2 as cloudinary } from 'cloudinary';
 import doctorModel from '../models/doctorsModel.js';
-//import e from 'express';
 import appointmentModel from '../models/appointmentModel.js';
 
 const registerUser = async (req, res) => {

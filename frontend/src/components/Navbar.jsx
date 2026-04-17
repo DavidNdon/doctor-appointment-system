@@ -46,15 +46,19 @@ const Navbar = () => {
           <div className="flex gap-2 items-center group relative">
             <div className="w-12 rounded-full object-cover bg-black">
               <img
-            onClick={() => setShowMenu(true)}
-              className="w-10 rounded-full bg-black"
-              src={userData.image}
-              alt=""
-              srcSet=""
-            />
+                onClick={() => setShowMenu(true)}
+                className="w-10 rounded-full bg-black"
+                src={
+                  userData && userData.image
+                    ? userData.image
+                    : assets.profile_pic
+                }
+                alt=""
+                srcSet=""
+              />
             </div>
             <img
-            onClick={() => setShowMenu(true)}
+              onClick={() => setShowMenu(true)}
               className="text-black w-2.5 cursor-pointer"
               src={assets.dropdown_icon}
               alt=""
@@ -62,14 +66,32 @@ const Navbar = () => {
             />
             <div className="absolute top-0 right-0 text-base font-medium p-14 text-black z-20 hidden group-hover:block">
               <div className="min-w-48 bg-stone-200 rounded flex flex-col gap-4 p-4">
-                <h3 onClick={() => navigate('/my-profile')} className="hover:bg-white p-2 cursor-pointer rounded">My Profile</h3>
-                <h3 onClick={() => navigate('/my-appointment')} className="hover:bg-white p-2 cursor-pointer rounded">My Appointment</h3>
-                <h3 onClick={logOut} className="hover:bg-white p-2 cursor-pointer rounded">logout</h3>
+                <h3
+                  onClick={() => navigate("/my-profile")}
+                  className="hover:bg-white p-2 cursor-pointer rounded"
+                >
+                  My Profile
+                </h3>
+                <h3
+                  onClick={() => navigate("/my-appointment")}
+                  className="hover:bg-white p-2 cursor-pointer rounded"
+                >
+                  My Appointment
+                </h3>
+                <h3
+                  onClick={logOut}
+                  className="hover:bg-white p-2 cursor-pointer rounded"
+                >
+                  logout
+                </h3>
               </div>
             </div>
           </div>
         ) : (
-          <button onClick={() => navigate('/login')} className="bg-blue-500 text-white p-4 rounded-full hidden md:block">
+          <button
+            onClick={() => navigate("/login")}
+            className="bg-blue-500 text-white p-4 rounded-full hidden md:block"
+          >
             Create Account
           </button>
         )}
